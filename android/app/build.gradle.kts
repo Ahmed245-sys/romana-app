@@ -34,14 +34,6 @@ android {
             isShrinkResources = false
         }
     }
-    
-    applicationVariants.all {
-        val variant = this
-        variant.outputs.all {
-            val output = this as com.android.build.gradle.internal.api.BaseVariantOutputImpl
-            output.outputFileName = "app-release.apk"
-        }
-    }
 }
 
 flutter {
