@@ -1,12 +1,12 @@
 workflows:
   android-workflow:
-    name: Android Build
+    name: Android AAB
     environment:
-      flutter: 3.24.0
+      flutter: stable
     scripts:
-      - name: Build APK
+      - name: Build AAB
         script: |
           flutter pub get
-          flutter build apk --release
+          flutter build appbundle --release
     artifacts:
-      - build/app/outputs/flutter-apk/app-release.apk
+      - build/app/outputs/bundle/release/app-release.aab
