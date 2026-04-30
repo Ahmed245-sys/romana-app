@@ -9,4 +9,4 @@ workflows:
           flutter pub get
           flutter build appbundle --release
     artifacts:
-  - build/**/*.aab
+      - build/**/*.aab
