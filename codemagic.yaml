@@ -8,5 +8,6 @@ workflows:
         script: |
           flutter pub get
           flutter build appbundle --release
+          find . -name "*.aab" -exec echo "Found: {}" \;
     artifacts:
-      - build/**/*.aab
+      - "**/*.aab"
