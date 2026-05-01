@@ -1,4 +1,4 @@
-،workflows:
+workflows:
   android-workflow:
     name: Android APK
     environment:
