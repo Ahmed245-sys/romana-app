@@ -1,4 +1,4 @@
-workflows:
+،workflows:
   android-workflow:
     name: Android APK
     environment:
@@ -8,5 +8,6 @@ workflows:
         script: |
           flutter pub get
           flutter build apk --release
+          find . -name "*.apk" -exec echo "Found: {}" \;
     artifacts:
-      - build/app/outputs/flutter-apk/app-release.apk
+      - "**/*.apk"
