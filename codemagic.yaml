@@ -1,13 +1,13 @@
 workflows:
   android-workflow:
-    name: Android APK
+    name: Android AAB
     environment:
       flutter: stable
     scripts:
-      - name: Build APK
+      - name: Build AAB
         script: |
           flutter pub get
-          flutter build apk --release
-          find . -name "*.apk" -exec echo "Found: {}" \;
+          flutter build appbundle --release
+          find . -name "*.aab" -exec echo "Found: {}" \;
     artifacts:
-      - "**/*.apk"
+      - "**/*.aab"
